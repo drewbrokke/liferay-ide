@@ -307,7 +307,7 @@ ${java_executable}
                 <actionGroup explanation="Configure proxy settings for Blade CLI">
                     <actionList>
                         <setInstallerVariable name="bladeProxyHostArg" value=" -D${proxysetting}.proxyHost=${proxyhost}"/>
-                        <setInstallerVariable name="bladeProxyHostArg" value=" -D${proxysetting}.proxyPort=${proxyport}"/>
+                        <setInstallerVariable name="bladeProxyPortArg" value=" -D${proxysetting}.proxyPort=${proxyport}"/>
 
                         <runProgram>
                             <program>${java_executable}</program>
@@ -528,19 +528,19 @@ ${java_executable}
                             <description></description>
                             <image></image>
                             <text>HTTP Proxy</text>
-                            <value>httpProxy</value>
+                            <value>http</value>
                         </option>
                         <option>
                             <description></description>
                             <image></image>
                             <text>HTTPS Proxy</text>
-                            <value>httpsProxy</value>
+                            <value>https</value>
                         </option>
                         <option>
                             <description></description>
                             <image></image>
                             <text>SOCKS5 Proxy</text>
-                            <value>socksProxy</value>
+                            <value>socks</value>
                         </option>
                     </optionList>
                 </choiceParameter>
