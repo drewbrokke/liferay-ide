@@ -75,121 +75,69 @@
     <postInstallationActionList>
         <if>
             <actionList>
-                <createDirectory>
-                    <path>${userHome}${platform_path_separator}.liferay</path>
-                    <progressText>Creating directory...</progressText>
-                </createDirectory>
-                <pathManipulation>
-                    <action>nativeAbsolutize</action>
-                    <path>${java_executable}/..</path>
-                    <variable>java_bin_dir</variable>
-                </pathManipulation>
-            </actionList>
-            <conditionRuleList>
-                <isTrue value="${clitools}"/>
-            </conditionRuleList>
-        </if>
-        <if>
-            <actionList>
                 <if>
                     <actionList>
-                        <if>
-                            <actionList>
-                                <setInstallerVariable>
-                                    <name>proxyHostArg</name>
-                                    <value> -Dhttp.proxyHost=${httpproxyhost}</value>
-                                </setInstallerVariable>
-                                <setInstallerVariable>
-                                    <name>proxyPortArg</name>
-                                    <value> -Dhttp.proxyPort=${httpproxyport}</value>
-                                </setInstallerVariable>
-                                <setInstallerVariable>
-                                    <name>proxyUsernameArg</name>
-                                    <value> -Dhttp.proxyUser=${httpproxyusername}</value>
-                                </setInstallerVariable>
-                                <setInstallerVariable>
-                                    <name>proxyPasswordArg</name>
-                                    <value> -Dhttp.proxyPassword=${httpproxypassword}</value>
-                                </setInstallerVariable>
-                            </actionList>
-                            <ruleList>
-                                <compareValues>
-                                    <logic>equals</logic>
-                                    <value1>${proxysetting}</value1>
-                                    <value2>httpProxy</value2>
-                                </compareValues>
-                            </ruleList>
-                        </if>
-                        <if>
-                            <actionList>
-                                <setInstallerVariable>
-                                    <name>proxyHostArg</name>
-                                    <value> -Dhttps.proxyHost=${httpsproxyhost}</value>
-                                </setInstallerVariable>
-                                <setInstallerVariable>
-                                    <name>proxyPortArg</name>
-                                    <value> -Dhttps.proxyPort=${httpsproxyport}</value>
-                                </setInstallerVariable>
-                                <setInstallerVariable>
-                                    <name>proxyUsernameArg</name>
-                                    <value> -Dhttps.proxyUser=${httpsproxyusername}</value>
-                                </setInstallerVariable>
-                                <setInstallerVariable>
-                                    <name>proxyPasswordArg</name>
-                                    <value> -Dhttps.proxyPassword=${httpsproxypassword}</value>
-                                </setInstallerVariable>
-                            </actionList>
-                            <ruleList>
-                                <compareValues>
-                                    <logic>equals</logic>
-                                    <value1>${proxysetting}</value1>
-                                    <value2>httpsProxy</value2>
-                                </compareValues>
-                            </ruleList>
-                        </if>
-                        <if>
-                            <actionList>
-                                <setInstallerVariable>
-                                    <name>proxyHostArg</name>
-                                    <value> -DsocksProxyHost=${socksproxyhost}</value>
-                                </setInstallerVariable>
-                                <setInstallerVariable>
-                                    <name>proxyPortArg</name>
-                                    <value> -DsocksProxyPort=${socksproxyport}</value>
-                                </setInstallerVariable>
-                                <setInstallerVariable>
-                                    <name>proxyUsernameArg</name>
-                                    <value></value>
-                                </setInstallerVariable>
-                                <setInstallerVariable>
-                                    <name>proxyPasswordArg</name>
-                                    <value></value>
-                                </setInstallerVariable>
-                            </actionList>
-                            <ruleList>
-                                <compareValues>
-                                    <logic>equals</logic>
-                                    <value1>${proxysetting}</value1>
-                                    <value2>socksProxy</value2>
-                                </compareValues>
-                            </ruleList>
-                        </if>
-                    </actionList>
-                    <conditionRuleList>
-                        <compareValues>
-                            <logic>equals</logic>
-                            <value1>${proxy}</value1>
-                            <value2>proxysetting</value2>
-                        </compareValues>
-                    </conditionRuleList>
-                    <elseActionList>
                         <setInstallerVariable>
                             <name>proxyHostArg</name>
-                            <value></value>
+                            <value> -Dhttp.proxyHost=${httpproxyhost}</value>
                         </setInstallerVariable>
                         <setInstallerVariable>
                             <name>proxyPortArg</name>
-                            <value></value>
+                            <value> -Dhttp.proxyPort=${httpproxyport}</value>
+                        </setInstallerVariable>
+                        <setInstallerVariable>
+                            <name>proxyUsernameArg</name>
+                            <value> -Dhttp.proxyUser=${httpproxyusername}</value>
+                        </setInstallerVariable>
+                        <setInstallerVariable>
+                            <name>proxyPasswordArg</name>
+                            <value> -Dhttp.proxyPassword=${httpproxypassword}</value>
+                        </setInstallerVariable>
+                    </actionList>
+                    <ruleList>
+                        <compareValues>
+                            <logic>equals</logic>
+                            <value1>${proxysetting}</value1>
+                            <value2>httpProxy</value2>
+                        </compareValues>
+                    </ruleList>
+                </if>
+                <if>
+                    <actionList>
+                        <setInstallerVariable>
+                            <name>proxyHostArg</name>
+                            <value> -Dhttps.proxyHost=${httpsproxyhost}</value>
+                        </setInstallerVariable>
+                        <setInstallerVariable>
+                            <name>proxyPortArg</name>
+                            <value> -Dhttps.proxyPort=${httpsproxyport}</value>
+                        </setInstallerVariable>
+                        <setInstallerVariable>
+                            <name>proxyUsernameArg</name>
+                            <value> -Dhttps.proxyUser=${httpsproxyusername}</value>
+                        </setInstallerVariable>
+                        <setInstallerVariable>
+                            <name>proxyPasswordArg</name>
+                            <value> -Dhttps.proxyPassword=${httpsproxypassword}</value>
+                        </setInstallerVariable>
+                    </actionList>
+                    <ruleList>
+                        <compareValues>
+                            <logic>equals</logic>
+                            <value1>${proxysetting}</value1>
+                            <value2>httpsProxy</value2>
+                        </compareValues>
+                    </ruleList>
+                </if>
+                <if>
+                    <actionList>
+                        <setInstallerVariable>
+                            <name>proxyHostArg</name>
+                            <value> -DsocksProxyHost=${socksproxyhost}</value>
+                        </setInstallerVariable>
+                        <setInstallerVariable>
+                            <name>proxyPortArg</name>
+                            <value> -DsocksProxyPort=${socksproxyport}</value>
                         </setInstallerVariable>
                         <setInstallerVariable>
                             <name>proxyUsernameArg</name>
@@ -199,18 +147,50 @@
                             <name>proxyPasswordArg</name>
                             <value></value>
                         </setInstallerVariable>
-                    </elseActionList>
+                    </actionList>
+                    <ruleList>
+                        <compareValues>
+                            <logic>equals</logic>
+                            <value1>${proxysetting}</value1>
+                            <value2>socksProxy</value2>
+                        </compareValues>
+                    </ruleList>
                 </if>
-                <writeFile>
-                    <encoding>utf-8</encoding>
-                    <path>${installdir}${platform_path_separator}pwd</path>
-                    <text>${password.password}</text>
-                </writeFile>
-                <deleteFile>
-                    <path>${installdir}${platform_path_separator}pwd</path>
-                </deleteFile>
             </actionList>
+            <conditionRuleList>
+                <compareValues>
+                    <logic>equals</logic>
+                    <value1>${proxy}</value1>
+                    <value2>proxysetting</value2>
+                </compareValues>
+            </conditionRuleList>
+            <elseActionList>
+                <setInstallerVariable>
+                    <name>proxyHostArg</name>
+                    <value></value>
+                </setInstallerVariable>
+                <setInstallerVariable>
+                    <name>proxyPortArg</name>
+                    <value></value>
+                </setInstallerVariable>
+                <setInstallerVariable>
+                    <name>proxyUsernameArg</name>
+                    <value></value>
+                </setInstallerVariable>
+                <setInstallerVariable>
+                    <name>proxyPasswordArg</name>
+                    <value></value>
+                </setInstallerVariable>
+            </elseActionList>
         </if>
+        <writeFile>
+            <encoding>utf-8</encoding>
+            <path>${installdir}${platform_path_separator}pwd</path>
+            <text>${password.password}</text>
+        </writeFile>
+        <deleteFile>
+            <path>${installdir}${platform_path_separator}pwd</path>
+        </deleteFile>
         <if>
             <explanation>is linux x86_64</explanation>
             <actionList>
@@ -360,22 +340,50 @@ ${java_executable}
             </elseActionList>
         </if>
         <if>
-            <explanation>is linux</explanation>
+            <explanation>Perform CLI Tools installation actions</explanation>
             <actionList>
-                <setInstallerVariable name="jpmSystemPath" value="${userHome}/jpm/bin"/>
-                <setInstallerVariable name="jpmSettingPath" value="${userHome}/.jpm"/>
-            </actionList>
-            <conditionRuleList>
-                <compareText>
-                    <logic>contains</logic>
-                    <nocase>1</nocase>
-                    <text>${platform_name}</text>
-                    <value>linux</value>
-                </compareText>
-            </conditionRuleList>
-            <elseActionList>
+                <createDirectory>
+                    <path>${userHome}${platform_path_separator}.liferay</path>
+                    <progressText>Creating directory...</progressText>
+                </createDirectory>
+                <pathManipulation>
+                    <action>nativeAbsolutize</action>
+                    <path>${java_executable}/..</path>
+                    <variable>java_bin_dir</variable>
+                </pathManipulation>
                 <if>
-                    <explanation>is mac</explanation>
+                    <explanation>Set extra arguments for JDK 17 and 21</explanation>
+                    <actionList>
+                        <setInstallerVariable name="extraArgumentForJdk17And21" value="--add-opens java.prefs/java.util.prefs=ALL-UNNAMED"/>
+                    </actionList>
+                    <conditionRuleList>
+                        <regExMatch>
+                            <logic>matches</logic>
+                            <pattern>.*(17|21).*</pattern>
+                            <text>${java_version}</text>
+                        </regExMatch>
+                    </conditionRuleList>
+                    <elseActionList>
+                        <setInstallerVariable name="extraArgumentForJdk17And21" value=""/>
+                    </elseActionList>
+                </if>
+                <if>
+                    <explanation>Set JPM paths for Linux</explanation>
+                    <actionList>
+                        <setInstallerVariable name="jpmSystemPath" value="${userHome}/jpm/bin"/>
+                        <setInstallerVariable name="jpmSettingPath" value="${userHome}/.jpm"/>
+                    </actionList>
+                    <conditionRuleList>
+                        <compareText>
+                            <logic>contains</logic>
+                            <nocase>1</nocase>
+                            <text>${platform_name}</text>
+                            <value>linux</value>
+                        </compareText>
+                    </conditionRuleList>
+                </if>
+                <if>
+                    <explanation>Set JPM paths for MacOS</explanation>
                     <actionList>
                         <setInstallerVariable name="jpmSystemPath" value="${userHome}/Library/PackageManager/bin"/>
                         <setInstallerVariable name="jpmSettingPath" value="${userHome}/.jpm"/>
@@ -387,52 +395,29 @@ ${java_executable}
                             <text>${platform_name}</text>
                             <value>osx</value>
                         </compareText>
-                        <isTrue value="${clitools}"/>
                     </conditionRuleList>
-                    <elseActionList>
-                        <if>
-                            <actionList>
-                                <setInstallerVariable name="jpmSystemPath" value="${userHome}\.jpm\windows\bin"/>
-                                <setInstallerVariable name="jpmSettingPath" value="${userHome}\.jpm\windows"/>
-                            </actionList>
-                            <conditionRuleList>
-                                <isTrue value="${clitools}"/>
-                            </conditionRuleList>
-                        </if>
-                    </elseActionList>
                 </if>
-            </elseActionList>
-        </if>
-        <if>
-            <actionList>
-                <setInstallerVariable name="extraArgumentForJdk17And21" value="--add-opens java.prefs/java.util.prefs=ALL-UNNAMED"/>
-            </actionList>
-            <conditionRuleList>
-                <regExMatch>
-                    <logic>matches</logic>
-                    <pattern>.*(17|21).*</pattern>
-                    <text>${java_version}</text>
-                </regExMatch>
-            </conditionRuleList>
-            <elseActionList>
-                <setInstallerVariable name="extraArgumentForJdk17And21" value=""/>
-            </elseActionList>
-        </if>
-        <if>
-            <actionList>
+                <if>
+                    <explanation>Set JPM paths for Windows</explanation>
+                    <actionList>
+                        <setInstallerVariable name="jpmSystemPath" value="${userHome}\.jpm\windows\bin"/>
+                        <setInstallerVariable name="jpmSettingPath" value="${userHome}\.jpm\windows"/>
+                    </actionList>
+                    <conditionRuleList>
+                        <compareText>
+                            <logic>contains</logic>
+                            <nocase>1</nocase>
+                            <text>${platform_name}</text>
+                            <value>windows</value>
+                        </compareText>
+                    </conditionRuleList>
+                </if>
                 <include>
                     <file>../components/run-java-jpm.xml</file>
                 </include>
                 <include>
                     <file>../components/run-java-jpm-win.xml</file>
                 </include>
-            </actionList>
-            <conditionRuleList>
-                <isTrue value="${clitools}"/>
-            </conditionRuleList>
-        </if>
-        <if>
-            <actionList>
                 <addDirectoryToPath>
                     <insertAt>end</insertAt>
                     <path>${jpmSystemPath}</path>
@@ -485,10 +470,7 @@ ${java_executable}
                         </fileExists>
                     </ruleList>
                 </runProgram>
-                <setInstallerVariable>
-                    <name>bladeCommandPath</name>
-                    <value>${jpmSystemPath}${platform_path_separator}blade</value>
-                </setInstallerVariable>
+                <setInstallerVariable name="bladeCommandPath" value="${jpmSystemPath}${platform_path_separator}blade"/>
                 <runProgram>
                     <program>chown</program>
                     <programArguments>-R ${env(SUDO_USER)} ${userHome}/.gradle</programArguments>
@@ -549,14 +531,8 @@ ${java_executable}
                     <actionList>
                         <if>
                             <actionList>
-                                <setInstallerVariable>
-                                    <name>bladeProxyHostArg</name>
-                                    <value> -Dhttp.proxyHost=${bladehttpproxyhost}</value>
-                                </setInstallerVariable>
-                                <setInstallerVariable>
-                                    <name>bladeProxyPortArg</name>
-                                    <value> -Dhttp.proxyPort=${bladehttpproxyport}</value>
-                                </setInstallerVariable>
+                                <setInstallerVariable name="bladeProxyHostArg" value=" -Dhttp.proxyHost=${bladehttpproxyhost}"/>
+                                <setInstallerVariable name="bladeProxyHostArg" value=" -Dhttp.proxyPort=${bladehttpproxyport}"/>
                             </actionList>
                             <ruleList>
                                 <compareText>
@@ -568,14 +544,8 @@ ${java_executable}
                         </if>
                         <if>
                             <actionList>
-                                <setInstallerVariable>
-                                    <name>bladeProxyHostArg</name>
-                                    <value> -Dhttps.proxyHost=${bladehttpsproxyhost}</value>
-                                </setInstallerVariable>
-                                <setInstallerVariable>
-                                    <name>bladeProxyPortArg</name>
-                                    <value> -Dhttps.proxyPort=${bladehttpsproxyport}</value>
-                                </setInstallerVariable>
+                                <setInstallerVariable name="bladeProxyHostArg" value=" -Dhttps.proxyHost=${bladehttpsproxyhost}" />
+                                <setInstallerVariable name="bladeProxyPortArg" value=" -Dhttps.proxyPort=${bladehttpsproxyport}" />
                             </actionList>
                             <ruleList>
                                 <compareText>
@@ -587,14 +557,8 @@ ${java_executable}
                         </if>
                         <if>
                             <actionList>
-                                <setInstallerVariable>
-                                    <name>bladeProxyHostArg</name>
-                                    <value> -DsystemProp.socks.proxyHost=${bladesocksproxyhost}</value>
-                                </setInstallerVariable>
-                                <setInstallerVariable>
-                                    <name>bladeProxyPortArg</name>
-                                    <value> -DsystemProp.socks.proxyPort=${bladesocksproxyport}</value>
-                                </setInstallerVariable>
+                                <setInstallerVariable name="bladeProxyHostArg" value=" -DsystemProp.socks.proxyHost=${bladesocksproxyhost}">
+                                <setInstallerVariable name="bladeProxyPortArg" value=" -DsystemProp.socks.proxyPort=${bladesocksproxyport}">
                             </actionList>
                             <ruleList>
                                 <compareText>
