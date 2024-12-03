@@ -263,13 +263,13 @@ ${java_executable}
                     <actionList>
                         <if explanation="Set Liferay version variable">
                             <actionList>
-                                <setInstallerVariable name="liferayVersion" value="7.4" />
+                                <setInstallerVariable name="liferayVersion" value="2024.q3" />
                             </actionList>
                             <conditionRuleList>
                                 <compareText logic="equals" text="${productkey}" value="dxp" />
                             </conditionRuleList>
                             <elseActionList>
-                                <setInstallerVariable name="liferayVersion" value="dxp-7.4-ga1" />
+                                <setInstallerVariable name="liferayVersion" value="7.4" />
                             </elseActionList>
                         </if>
                         <runProgram explanation="Run blade init">
