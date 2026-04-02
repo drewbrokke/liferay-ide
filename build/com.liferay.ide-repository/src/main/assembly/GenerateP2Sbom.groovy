@@ -74,6 +74,40 @@ if (!projectVersion) {
 	}
 }
 
+// --- Shared utility: read Maven coordinates from META-INF/maven/**/pom.properties inside a JAR ---
+
+def readPomProperties = { File jarFile ->
+	try {
+		def result = new ZipFile(jarFile).withCloseable { zip ->
+			def pomPropsEntry = zip.entries().toList().find { entry ->
+				entry.name.startsWith("META-INF/maven/") && entry.name.endsWith("/pom.properties")
+			}
+
+			if (pomPropsEntry) {
+				def props = new Properties()
+
+				props.load(zip.getInputStream(pomPropsEntry))
+
+				def g = props.getProperty("groupId")
+				def a = props.getProperty("artifactId")
+				def v = props.getProperty("version")
+
+				if (g && a && v) {
+					return [groupId: g, artifactId: a, version: v]
+				}
+			}
+
+			return null
+		}
+
+		return result
+	}
+	catch (Exception ignored) {
+	}
+
+	return null
+}
+
 // --- Phase A: Parse content.xml ---
 
 println "Generating SBOM from p2 repository metadata..."
@@ -83,8 +117,6 @@ if (!new File(contentJar).exists()) {
 	System.err.println("Build the repository first: ./mvnw clean package -DskipTests")
 	System.exit(1)
 }
-
-// Extract content.xml from content.jar
 
 def contentXmlText
 
@@ -151,24 +183,12 @@ root.units.unit.each { unit ->
 		}
 
 		if (pluginJar) {
-			try {
-				new ZipFile(pluginJar).withCloseable { zip ->
-					def pomPropsEntry = zip.entries().toList().find { entry ->
-						entry.name.startsWith("META-INF/maven/") && entry.name.endsWith("/pom.properties")
-					}
+			def pomProps = readPomProperties(pluginJar)
 
-					if (pomPropsEntry) {
-						def props = new Properties()
-
-						props.load(zip.getInputStream(pomPropsEntry))
-
-						mavenGroupId = props.getProperty("groupId")
-						mavenArtifactId = props.getProperty("artifactId")
-						mavenVersion = props.getProperty("version")
-					}
-				}
-			}
-			catch (Exception ignored) {
+			if (pomProps) {
+				mavenGroupId = pomProps.groupId
+				mavenArtifactId = pomProps.artifactId
+				mavenVersion = pomProps.version
 			}
 		}
 	}
@@ -317,44 +337,6 @@ if (mappingFile.exists()) {
 
 def jarVersionPattern = Pattern.compile("(.+?)[-_](\\d+\\.\\d+[\\d.]*(?:-[A-Za-z0-9]+)?)\\.jar")
 
-// Read Maven coordinates from META-INF/maven/**/pom.properties inside a JAR
-
-def readPomProperties = { File jarFile ->
-	try {
-		def zip = new ZipFile(jarFile)
-
-		try {
-			def pomPropsEntry = zip.entries().toList().find { entry ->
-				entry.name.startsWith("META-INF/maven/") && entry.name.endsWith("/pom.properties")
-			}
-
-			if (!pomPropsEntry) {
-				return null
-			}
-
-			def props = new Properties()
-
-			props.load(zip.getInputStream(pomPropsEntry))
-
-			def g = props.getProperty("groupId")
-			def a = props.getProperty("artifactId")
-			def v = props.getProperty("version")
-
-			if (g && a && v) {
-				return [groupId: g, artifactId: a, version: v]
-			}
-		}
-		finally {
-			zip.close()
-		}
-	}
-	catch (Exception e) {
-		// JAR may be corrupt or not a valid zip
-	}
-
-	return null
-}
-
 def pluginDirs = ["tools/plugins", "enterprise/plugins", "maven/plugins", "portal/plugins"]
 def embeddedCount = 0
 def pomPropsCount = 0
@@ -400,7 +382,6 @@ pluginDirs.each { pluginDir ->
 			def g = null
 			def a = null
 			def v = null
-			def source = null
 
 			// Priority 1: Read pom.properties from inside the JAR
 
@@ -411,7 +392,6 @@ pluginDirs.each { pluginDir ->
 					g = pomProps.groupId
 					a = pomProps.artifactId
 					v = pomProps.version
-					source = "pom.properties"
 					pomPropsCount++
 				}
 			}
@@ -425,7 +405,6 @@ pluginDirs.each { pluginDir ->
 					g = mapping.groupId
 					a = mapping.artifactId
 					v = mapping.version
-					source = "mapping"
 				}
 			}
 
@@ -496,17 +475,7 @@ println "Generating CycloneDX 1.5 SBOM..."
 def iuToPurl = [:]
 
 components.each { comp ->
-	def name = comp.name
-
-	iuToPurl[name] = comp.purl
-
-	// Also map by purl's artifact name
-
-	def bomRef = comp["bom-ref"]
-
-	if (bomRef) {
-		iuToPurl[bomRef] = comp.purl
-	}
+	iuToPurl[comp.name] = comp.purl
 }
 
 def dependencies = []
