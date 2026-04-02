@@ -1,0 +1,89 @@
+{
+	"commons-configuration-1.6.jar": {
+		"groupId": "commons-configuration",
+		"artifactId": "commons-configuration"
+	},
+	"commons-validator-1.6.jar": {
+		"groupId": "commons-validator",
+		"artifactId": "commons-validator"
+	},
+	"docker-java-3.2.10.jar": {
+		"groupId": "com.github.docker-java",
+		"artifactId": "docker-java"
+	},
+	"docker-java-api-3.2.10.jar": {
+		"groupId": "com.github.docker-java",
+		"artifactId": "docker-java-api"
+	},
+	"docker-java-core-3.2.10.jar": {
+		"groupId": "com.github.docker-java",
+		"artifactId": "docker-java-core"
+	},
+	"docker-java-transport-3.2.10.jar": {
+		"groupId": "com.github.docker-java",
+		"artifactId": "docker-java-transport"
+	},
+	"docker-java-transport-zerodep-3.2.10.jar": {
+		"groupId": "com.github.docker-java",
+		"artifactId": "docker-java-transport-zerodep"
+	},
+	"freemarker-2.3.17-patched.jar": {
+		"groupId": "org.freemarker",
+		"artifactId": "freemarker",
+		"version": "2.3.17"
+	},
+	"gradle-tooling.jar": {
+		"groupId": "com.liferay.ide",
+		"artifactId": "gradle-tooling",
+		"version": "unknown"
+	},
+	"groovy-4.0.7.jar": {
+		"groupId": "org.apache.groovy",
+		"artifactId": "groovy"
+	},
+	"groovy-all-1.7.5.jar": {
+		"groupId": "org.codehaus.groovy",
+		"artifactId": "groovy-all"
+	},
+	"jackson-core-asl-1.9.13.jar": {
+		"groupId": "org.codehaus.jackson",
+		"artifactId": "jackson-core-asl"
+	},
+	"jackson-mapper-asl-1.9.13.jar": {
+		"groupId": "org.codehaus.jackson",
+		"artifactId": "jackson-mapper-asl"
+	},
+	"jna-5.8.0.jar": {
+		"groupId": "net.java.dev.jna",
+		"artifactId": "jna"
+	},
+	"junixsocket-common-2.2.0.jar": {
+		"groupId": "com.kohlschutter.junixsocket",
+		"artifactId": "junixsocket-common"
+	},
+	"junixsocket-native-common-2.2.0.jar": {
+		"groupId": "com.kohlschutter.junixsocket",
+		"artifactId": "junixsocket-native-common"
+	},
+	"maven-portal-support.jar": {
+		"groupId": "com.liferay.ide",
+		"artifactId": "maven-portal-support",
+		"version": "unknown"
+	},
+	"org.apache.httpcomponents.httpclient_4.2.1.jar": {
+		"groupId": "org.apache.httpcomponents",
+		"artifactId": "httpclient"
+	},
+	"org.apache.httpcomponents.httpcore_4.2.1.jar": {
+		"groupId": "org.apache.httpcomponents",
+		"artifactId": "httpcore"
+	},
+	"org.apache.httpcomponents.httpmime_4.2.1.jar": {
+		"groupId": "org.apache.httpcomponents",
+		"artifactId": "httpmime"
+	},
+	"com.liferay.workspace.bundle.url.codec-1.0.0.jar": {
+		"groupId": "com.liferay",
+		"artifactId": "com.liferay.workspace.bundle.url.codec"
+	}
+}
