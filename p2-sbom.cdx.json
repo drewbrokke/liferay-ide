@@ -1,10 +1,10 @@
 {
     "bomFormat": "CycloneDX",
     "specVersion": "1.5",
-    "serialNumber": "urn:uuid:a4190243-e025-4774-98af-ef042302230c",
+    "serialNumber": "urn:uuid:b4a9a742-1c42-4556-b45b-6a3b12247f8e",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-04-02T21:56:53.527949Z",
+        "timestamp": "2026-04-02T22:08:25.333203Z",
         "tools": {
             "components": [
                 {
@@ -26,6 +26,66 @@
         }
     },
     "components": [
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/biz.aQute.bnd/biz.aQute.bnd.embedded-repo@7.0.0",
+            "name": "biz.aQute.bnd.embedded-repo",
+            "version": "7.0.0",
+            "purl": "pkg:maven/biz.aQute.bnd/biz.aQute.bnd.embedded-repo@7.0.0",
+            "description": "Embedded Repo for bnd workspace.",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "biz.aQute.bnd"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/biz.aQute.bnd/biz.aQute.bnd.maven@7.0.0",
+            "name": "biz.aQute.bnd.maven",
+            "version": "7.0.0",
+            "purl": "pkg:maven/biz.aQute.bnd/biz.aQute.bnd.maven@7.0.0",
+            "description": "Shared logic used by bnd maven plugins",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "biz.aQute.bnd"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/biz.aQute.bnd/biz.aQute.bnd.util@7.0.0",
+            "name": "biz.aQute.bnd.util",
+            "version": "7.0.0",
+            "purl": "pkg:maven/biz.aQute.bnd/biz.aQute.bnd.util@7.0.0",
+            "description": "Util classes",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "biz.aQute.bnd"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/biz.aQute.bnd/biz.aQute.bndlib@7.0.0",
+            "name": "biz.aQute.bndlib",
+            "version": "7.0.0",
+            "purl": "pkg:maven/biz.aQute.bnd/biz.aQute.bndlib@7.0.0",
+            "description": "bndlib: A Swiss Army Knife for OSGi",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "biz.aQute.bnd"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/biz.aQute.bnd/biz.aQute.repository@7.0.0",
+            "name": "biz.aQute.repository",
+            "version": "7.0.0",
+            "purl": "pkg:maven/biz.aQute.bnd/biz.aQute.repository@7.0.0",
+            "description": "biz.aQute.repository",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "biz.aQute.bnd"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/biz.aQute.bnd/biz.aQute.resolve@7.0.0",
+            "name": "biz.aQute.resolve",
+            "version": "7.0.0",
+            "purl": "pkg:maven/biz.aQute.bnd/biz.aQute.resolve@7.0.0",
+            "description": "biz.aQute.resolve",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "biz.aQute.bnd"
+        },
         {
             "type": "library",
             "bom-ref": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.20",
@@ -415,6 +475,16 @@
         },
         {
             "type": "library",
+            "bom-ref": "pkg:maven/com.liferay/com.liferay.release.util@1.0.0",
+            "name": "com.liferay.release.util",
+            "version": "1.0.0",
+            "purl": "pkg:maven/com.liferay/com.liferay.release.util@1.0.0",
+            "description": "Liferay Release Utilities",
+            "publisher": "Liferay, Inc.",
+            "group": "com.liferay"
+        },
+        {
+            "type": "library",
             "bom-ref": "pkg:maven/commons-cli/commons-cli@1.2",
             "name": "commons-cli",
             "version": "1.2",
@@ -565,6 +635,46 @@
         },
         {
             "type": "library",
+            "bom-ref": "pkg:maven/org.apache.maven.archetype/archetype-catalog@3.2.1",
+            "name": "archetype-catalog",
+            "version": "3.2.1",
+            "purl": "pkg:maven/org.apache.maven.archetype/archetype-catalog@3.2.1",
+            "description": "M2Eclipse's archetype-catalog",
+            "publisher": "Eclipse.org - m2e",
+            "group": "org.apache.maven.archetype"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.apache.maven.archetype/archetype-common@3.2.1",
+            "name": "archetype-common",
+            "version": "3.2.1",
+            "purl": "pkg:maven/org.apache.maven.archetype/archetype-common@3.2.1",
+            "description": "M2Eclipse's archetype-common",
+            "publisher": "Eclipse.org - m2e",
+            "group": "org.apache.maven.archetype"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.apache.maven.archetype/archetype-descriptor@3.2.1",
+            "name": "archetype-descriptor",
+            "version": "3.2.1",
+            "purl": "pkg:maven/org.apache.maven.archetype/archetype-descriptor@3.2.1",
+            "description": "M2Eclipse's archetype-descriptor",
+            "publisher": "Eclipse.org - m2e",
+            "group": "org.apache.maven.archetype"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.apache.maven.shared/maven-artifact-transfer@0.13.1",
+            "name": "maven-artifact-transfer",
+            "version": "0.13.1",
+            "purl": "pkg:maven/org.apache.maven.shared/maven-artifact-transfer@0.13.1",
+            "description": "M2Eclipse's maven-artifact-transfer",
+            "publisher": "Eclipse.org - m2e",
+            "group": "org.apache.maven.shared"
+        },
+        {
+            "type": "library",
             "bom-ref": "pkg:maven/org.apache.velocity/velocity-engine-core@2.4.1",
             "name": "velocity-engine-core",
             "version": "2.4.1",
@@ -572,6 +682,166 @@
             "description": "Apache Velocity is a general purpose template engine.",
             "publisher": "The Apache Software Foundation",
             "group": "org.apache.velocity"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.bndtools/bndtools.api@7.0.0",
+            "name": "bndtools.api",
+            "version": "7.0.0",
+            "purl": "pkg:maven/org.bndtools/bndtools.api@7.0.0",
+            "description": "bndtools.api",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "org.bndtools"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.bndtools/bndtools.builder@7.0.0",
+            "name": "bndtools.builder",
+            "version": "7.0.0",
+            "purl": "pkg:maven/org.bndtools/bndtools.builder@7.0.0",
+            "description": "bndtools.builder",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "org.bndtools"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.bndtools/bndtools.core.services@7.0.0",
+            "name": "bndtools.core.services",
+            "version": "7.0.0",
+            "purl": "pkg:maven/org.bndtools/bndtools.core.services@7.0.0",
+            "description": "bndtools.core.services",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "org.bndtools"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.bndtools/bndtools.core@7.0.0",
+            "name": "bndtools.core",
+            "version": "7.0.0",
+            "purl": "pkg:maven/org.bndtools/bndtools.core@7.0.0",
+            "description": "bndtools.core",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "org.bndtools"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.bndtools/bndtools.jareditor@7.0.0",
+            "name": "bndtools.jareditor",
+            "version": "7.0.0",
+            "purl": "pkg:maven/org.bndtools/bndtools.jareditor@7.0.0",
+            "description": "bndtools.jareditor",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "org.bndtools"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.bndtools/bndtools.m2e@7.0.0",
+            "name": "bndtools.m2e",
+            "version": "7.0.0",
+            "purl": "pkg:maven/org.bndtools/bndtools.m2e@7.0.0",
+            "description": "bndtools.m2e",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "org.bndtools"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.bndtools/bndtools.release@7.0.0",
+            "name": "bndtools.release",
+            "version": "7.0.0",
+            "purl": "pkg:maven/org.bndtools/bndtools.release@7.0.0",
+            "description": "bndtools.release",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "org.bndtools"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.bndtools/org.bndtools.headless.build.manager@7.0.0",
+            "name": "org.bndtools.headless.build.manager",
+            "version": "7.0.0",
+            "purl": "pkg:maven/org.bndtools/org.bndtools.headless.build.manager@7.0.0",
+            "description": "org.bndtools.headless.build.manager",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "org.bndtools"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.bndtools/org.bndtools.headless.build.plugin.ant@7.0.0",
+            "name": "org.bndtools.headless.build.plugin.ant",
+            "version": "7.0.0",
+            "purl": "pkg:maven/org.bndtools/org.bndtools.headless.build.plugin.ant@7.0.0",
+            "description": "org.bndtools.headless.build.plugin.ant",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "org.bndtools"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.bndtools/org.bndtools.headless.build.plugin.gradle@7.0.0",
+            "name": "org.bndtools.headless.build.plugin.gradle",
+            "version": "7.0.0",
+            "purl": "pkg:maven/org.bndtools/org.bndtools.headless.build.plugin.gradle@7.0.0",
+            "description": "org.bndtools.headless.build.plugin.gradle",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "org.bndtools"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.bndtools/org.bndtools.launch@7.0.0",
+            "name": "org.bndtools.launch",
+            "version": "7.0.0",
+            "purl": "pkg:maven/org.bndtools/org.bndtools.launch@7.0.0",
+            "description": "org.bndtools.launch",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "org.bndtools"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.bndtools/org.bndtools.remoteinstall@7.0.0",
+            "name": "org.bndtools.remoteinstall",
+            "version": "7.0.0",
+            "purl": "pkg:maven/org.bndtools/org.bndtools.remoteinstall@7.0.0",
+            "description": "org.bndtools.remoteinstall",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "org.bndtools"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.bndtools/org.bndtools.templating.gitrepo@7.0.0",
+            "name": "org.bndtools.templating.gitrepo",
+            "version": "7.0.0",
+            "purl": "pkg:maven/org.bndtools/org.bndtools.templating.gitrepo@7.0.0",
+            "description": "org.bndtools.templating.gitrepo",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "org.bndtools"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.bndtools/org.bndtools.templating@7.0.0",
+            "name": "org.bndtools.templating",
+            "version": "7.0.0",
+            "purl": "pkg:maven/org.bndtools/org.bndtools.templating@7.0.0",
+            "description": "org.bndtools.templating",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "org.bndtools"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.bndtools/org.bndtools.versioncontrol.ignores.manager@7.0.0",
+            "name": "org.bndtools.versioncontrol.ignores.manager",
+            "version": "7.0.0",
+            "purl": "pkg:maven/org.bndtools/org.bndtools.versioncontrol.ignores.manager@7.0.0",
+            "description": "org.bndtools.versioncontrol.ignores.manager",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "org.bndtools"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.bndtools/org.bndtools.versioncontrol.ignores.plugin.git@7.0.0",
+            "name": "org.bndtools.versioncontrol.ignores.plugin.git",
+            "version": "7.0.0",
+            "purl": "pkg:maven/org.bndtools/org.bndtools.versioncontrol.ignores.plugin.git@7.0.0",
+            "description": "org.bndtools.versioncontrol.ignores.plugin.git",
+            "publisher": "Bndtools https://bndtools.org/",
+            "group": "org.bndtools"
         },
         {
             "type": "library",
@@ -2693,6 +2963,16 @@
         },
         {
             "type": "library",
+            "bom-ref": "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.collections@3.2.2-SNAPSHOT",
+            "name": "org.apache.commons.collections",
+            "version": "3.2.2-SNAPSHOT",
+            "purl": "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.collections@3.2.2-SNAPSHOT",
+            "description": "Apache Commons Collections",
+            "publisher": "Eclipse Orbit",
+            "group": "org.eclipse.orbit.bundles"
+        },
+        {
+            "type": "library",
             "bom-ref": "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.compress@1.22.0-SNAPSHOT",
             "name": "org.apache.commons.compress",
             "version": "1.22.0-SNAPSHOT",
@@ -2739,6 +3019,25 @@
             "purl": "pkg:maven/org.eclipse.orbit.bundles/org.mozilla.javascript@1.7.10-SNAPSHOT",
             "description": "Mozilla Rhino",
             "publisher": "Eclipse Orbit",
+            "group": "org.eclipse.orbit.bundles"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.eclipse.orbit.bundles/org.objectweb.asm@5.2.0-SNAPSHOT",
+            "name": "org.objectweb.asm",
+            "version": "5.2.0-SNAPSHOT",
+            "purl": "pkg:maven/org.eclipse.orbit.bundles/org.objectweb.asm@5.2.0-SNAPSHOT",
+            "description": "ASM Core",
+            "publisher": "Eclipse Orbit",
+            "group": "org.eclipse.orbit.bundles"
+        },
+        {
+            "type": "library",
+            "bom-ref": "pkg:maven/org.eclipse.orbit.bundles/org.slf4j.api@1.7.30-SNAPSHOT",
+            "name": "org.slf4j.api",
+            "version": "1.7.30-SNAPSHOT",
+            "purl": "pkg:maven/org.eclipse.orbit.bundles/org.slf4j.api@1.7.30-SNAPSHOT",
+            "description": "The slf4j API",
             "group": "org.eclipse.orbit.bundles"
         },
         {
@@ -5313,6 +5612,15 @@
         },
         {
             "type": "library",
+            "bom-ref": "pkg:maven/org.json/json@20131018",
+            "name": "json",
+            "version": "20131018",
+            "purl": "pkg:maven/org.json/json@20131018",
+            "description": "org.json",
+            "group": "org.json"
+        },
+        {
+            "type": "library",
             "bom-ref": "pkg:maven/org.osgi/org.osgi.service.cm@1.6.1",
             "name": "org.osgi.service.cm",
             "version": "1.6.1",
@@ -5453,6 +5761,16 @@
         },
         {
             "type": "library",
+            "bom-ref": "pkg:maven/org.osgi/org.osgi.util.promise@1.2.0",
+            "name": "org.osgi.util.promise",
+            "version": "1.2.0",
+            "purl": "pkg:maven/org.osgi/org.osgi.util.promise@1.2.0",
+            "description": "OSGi Companion Code for org.osgi.util.promise Version 1.2.0",
+            "publisher": "Eclipse Foundation",
+            "group": "org.osgi"
+        },
+        {
+            "type": "library",
             "bom-ref": "pkg:maven/org.osgi/org.osgi.util.promise@1.3.0",
             "name": "org.osgi.util.promise",
             "version": "1.3.0",
@@ -5482,105 +5800,6 @@
         },
         {
             "type": "library",
-            "bom-ref": "pkg:p2/biz.aQute.bnd.embedded-repo@7.0.0.202310060912",
-            "name": "biz.aQute.bnd.embedded-repo",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/biz.aQute.bnd.embedded-repo@7.0.0.202310060912",
-            "description": "Embedded Repo for bnd workspace.",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/biz.aQute.bnd.maven@7.0.0.202310060912",
-            "name": "biz.aQute.bnd.maven",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/biz.aQute.bnd.maven@7.0.0.202310060912",
-            "description": "Shared logic used by bnd maven plugins",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/biz.aQute.bnd.util@7.0.0.202310060912",
-            "name": "biz.aQute.bnd.util",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/biz.aQute.bnd.util@7.0.0.202310060912",
-            "description": "Util classes",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/biz.aQute.bndlib@7.0.0.202310060912",
-            "name": "biz.aQute.bndlib",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/biz.aQute.bndlib@7.0.0.202310060912",
-            "description": "bndlib: A Swiss Army Knife for OSGi",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/biz.aQute.repository@7.0.0.202310060912",
-            "name": "biz.aQute.repository",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/biz.aQute.repository@7.0.0.202310060912",
-            "description": "biz.aQute.repository",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/biz.aQute.resolve@7.0.0.202310060912",
-            "name": "biz.aQute.resolve",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/biz.aQute.resolve@7.0.0.202310060912",
-            "description": "biz.aQute.resolve",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/bndtools.api@7.0.0.202310060912",
-            "name": "bndtools.api",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/bndtools.api@7.0.0.202310060912",
-            "description": "bndtools.api",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/bndtools.builder@7.0.0.202310060912",
-            "name": "bndtools.builder",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/bndtools.builder@7.0.0.202310060912",
-            "description": "bndtools.builder",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/bndtools.core.services@7.0.0.202310060912",
-            "name": "bndtools.core.services",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/bndtools.core.services@7.0.0.202310060912",
-            "description": "bndtools.core.services",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/bndtools.core@7.0.0.202310060912",
-            "name": "bndtools.core",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/bndtools.core@7.0.0.202310060912",
-            "description": "bndtools.core",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/bndtools.jareditor@7.0.0.202310060912",
-            "name": "bndtools.jareditor",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/bndtools.jareditor@7.0.0.202310060912",
-            "description": "bndtools.jareditor",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
             "bom-ref": "pkg:p2/bndtools.m2e.feature@7.0.0.REL-202310060912-gb82dc86",
             "name": "bndtools.m2e.feature",
             "version": "7.0.0.REL-202310060912-gb82dc86",
@@ -5594,15 +5813,6 @@
                     }
                 }
             ]
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/bndtools.m2e@7.0.0.202310060912",
-            "name": "bndtools.m2e",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/bndtools.m2e@7.0.0.202310060912",
-            "description": "bndtools.m2e",
-            "publisher": "Bndtools https://bndtools.org/"
         },
         {
             "type": "library",
@@ -5622,15 +5832,6 @@
         },
         {
             "type": "library",
-            "bom-ref": "pkg:p2/bndtools.release@7.0.0.202310060912",
-            "name": "bndtools.release",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/bndtools.release@7.0.0.202310060912",
-            "description": "bndtools.release",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
             "bom-ref": "pkg:p2/com.google.protobuf@2.4.0.v201105131100",
             "name": "com.google.protobuf",
             "version": "2.4.0.v201105131100",
@@ -5640,80 +5841,80 @@
         },
         {
             "type": "library",
-            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.cocoa.macosx.aarch64.DeveloperStudio@3.10.6.202604020325",
+            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.cocoa.macosx.aarch64.DeveloperStudio@3.10.6.202604022201",
             "name": "com.liferay.ide.studio.executable.cocoa.macosx.aarch64.DeveloperStudio",
-            "version": "3.10.6.202604020325",
-            "purl": "pkg:p2/com.liferay.ide.studio.executable.cocoa.macosx.aarch64.DeveloperStudio@3.10.6.202604020325"
+            "version": "3.10.6.202604022201",
+            "purl": "pkg:p2/com.liferay.ide.studio.executable.cocoa.macosx.aarch64.DeveloperStudio@3.10.6.202604022201"
         },
         {
             "type": "library",
-            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.cocoa.macosx.aarch64@3.10.6.202604020325",
+            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.cocoa.macosx.aarch64@3.10.6.202604022201",
             "name": "com.liferay.ide.studio.executable.cocoa.macosx.aarch64",
-            "version": "3.10.6.202604020325",
-            "purl": "pkg:p2/com.liferay.ide.studio.executable.cocoa.macosx.aarch64@3.10.6.202604020325"
+            "version": "3.10.6.202604022201",
+            "purl": "pkg:p2/com.liferay.ide.studio.executable.cocoa.macosx.aarch64@3.10.6.202604022201"
         },
         {
             "type": "library",
-            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.cocoa.macosx.x86_64.DeveloperStudio@3.10.6.202604020325",
+            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.cocoa.macosx.x86_64.DeveloperStudio@3.10.6.202604022201",
             "name": "com.liferay.ide.studio.executable.cocoa.macosx.x86_64.DeveloperStudio",
-            "version": "3.10.6.202604020325",
-            "purl": "pkg:p2/com.liferay.ide.studio.executable.cocoa.macosx.x86_64.DeveloperStudio@3.10.6.202604020325"
+            "version": "3.10.6.202604022201",
+            "purl": "pkg:p2/com.liferay.ide.studio.executable.cocoa.macosx.x86_64.DeveloperStudio@3.10.6.202604022201"
         },
         {
             "type": "library",
-            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.cocoa.macosx.x86_64@3.10.6.202604020325",
+            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.cocoa.macosx.x86_64@3.10.6.202604022201",
             "name": "com.liferay.ide.studio.executable.cocoa.macosx.x86_64",
-            "version": "3.10.6.202604020325",
-            "purl": "pkg:p2/com.liferay.ide.studio.executable.cocoa.macosx.x86_64@3.10.6.202604020325"
+            "version": "3.10.6.202604022201",
+            "purl": "pkg:p2/com.liferay.ide.studio.executable.cocoa.macosx.x86_64@3.10.6.202604022201"
         },
         {
             "type": "library",
-            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.gtk.linux.aarch64.DeveloperStudio@3.10.6.202604020325",
+            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.gtk.linux.aarch64.DeveloperStudio@3.10.6.202604022201",
             "name": "com.liferay.ide.studio.executable.gtk.linux.aarch64.DeveloperStudio",
-            "version": "3.10.6.202604020325",
-            "purl": "pkg:p2/com.liferay.ide.studio.executable.gtk.linux.aarch64.DeveloperStudio@3.10.6.202604020325"
+            "version": "3.10.6.202604022201",
+            "purl": "pkg:p2/com.liferay.ide.studio.executable.gtk.linux.aarch64.DeveloperStudio@3.10.6.202604022201"
         },
         {
             "type": "library",
-            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.gtk.linux.aarch64@3.10.6.202604020325",
+            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.gtk.linux.aarch64@3.10.6.202604022201",
             "name": "com.liferay.ide.studio.executable.gtk.linux.aarch64",
-            "version": "3.10.6.202604020325",
-            "purl": "pkg:p2/com.liferay.ide.studio.executable.gtk.linux.aarch64@3.10.6.202604020325"
+            "version": "3.10.6.202604022201",
+            "purl": "pkg:p2/com.liferay.ide.studio.executable.gtk.linux.aarch64@3.10.6.202604022201"
         },
         {
             "type": "library",
-            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.gtk.linux.x86_64.DeveloperStudio@3.10.6.202604020325",
+            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.gtk.linux.x86_64.DeveloperStudio@3.10.6.202604022201",
             "name": "com.liferay.ide.studio.executable.gtk.linux.x86_64.DeveloperStudio",
-            "version": "3.10.6.202604020325",
-            "purl": "pkg:p2/com.liferay.ide.studio.executable.gtk.linux.x86_64.DeveloperStudio@3.10.6.202604020325"
+            "version": "3.10.6.202604022201",
+            "purl": "pkg:p2/com.liferay.ide.studio.executable.gtk.linux.x86_64.DeveloperStudio@3.10.6.202604022201"
         },
         {
             "type": "library",
-            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.gtk.linux.x86_64@3.10.6.202604020325",
+            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.gtk.linux.x86_64@3.10.6.202604022201",
             "name": "com.liferay.ide.studio.executable.gtk.linux.x86_64",
-            "version": "3.10.6.202604020325",
-            "purl": "pkg:p2/com.liferay.ide.studio.executable.gtk.linux.x86_64@3.10.6.202604020325"
+            "version": "3.10.6.202604022201",
+            "purl": "pkg:p2/com.liferay.ide.studio.executable.gtk.linux.x86_64@3.10.6.202604022201"
         },
         {
             "type": "library",
-            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.win32.win32.x86_64.DeveloperStudio@3.10.6.202604020325",
+            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.win32.win32.x86_64.DeveloperStudio@3.10.6.202604022201",
             "name": "com.liferay.ide.studio.executable.win32.win32.x86_64.DeveloperStudio",
-            "version": "3.10.6.202604020325",
-            "purl": "pkg:p2/com.liferay.ide.studio.executable.win32.win32.x86_64.DeveloperStudio@3.10.6.202604020325"
+            "version": "3.10.6.202604022201",
+            "purl": "pkg:p2/com.liferay.ide.studio.executable.win32.win32.x86_64.DeveloperStudio@3.10.6.202604022201"
         },
         {
             "type": "library",
-            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.win32.win32.x86_64@3.10.6.202604020325",
+            "bom-ref": "pkg:p2/com.liferay.ide.studio.executable.win32.win32.x86_64@3.10.6.202604022201",
             "name": "com.liferay.ide.studio.executable.win32.win32.x86_64",
-            "version": "3.10.6.202604020325",
-            "purl": "pkg:p2/com.liferay.ide.studio.executable.win32.win32.x86_64@3.10.6.202604020325"
+            "version": "3.10.6.202604022201",
+            "purl": "pkg:p2/com.liferay.ide.studio.executable.win32.win32.x86_64@3.10.6.202604022201"
         },
         {
             "type": "library",
-            "bom-ref": "pkg:p2/com.liferay.ide.studio@3.10.6.202604020325",
+            "bom-ref": "pkg:p2/com.liferay.ide.studio@3.10.6.202604022201",
             "name": "com.liferay.ide.studio",
-            "version": "3.10.6.202604020325",
-            "purl": "pkg:p2/com.liferay.ide.studio@3.10.6.202604020325",
+            "version": "3.10.6.202604022201",
+            "purl": "pkg:p2/com.liferay.ide.studio@3.10.6.202604022201",
             "description": "Liferay Developer Studio",
             "licenses": [
                 {
@@ -5722,15 +5923,6 @@
                     }
                 }
             ]
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/com.liferay.release.util@1.0.0",
-            "name": "com.liferay.release.util",
-            "version": "1.0.0",
-            "purl": "pkg:p2/com.liferay.release.util@1.0.0",
-            "description": "Liferay Release Utilities",
-            "publisher": "Liferay, Inc."
         },
         {
             "type": "library",
@@ -5761,15 +5953,6 @@
         },
         {
             "type": "library",
-            "bom-ref": "pkg:p2/org.apache.commons.collections@3.2.2.v201511171945",
-            "name": "org.apache.commons.collections",
-            "version": "3.2.2.v201511171945",
-            "purl": "pkg:p2/org.apache.commons.collections@3.2.2.v201511171945",
-            "description": "Apache Commons Collections",
-            "publisher": "Eclipse Orbit"
-        },
-        {
-            "type": "library",
             "bom-ref": "pkg:p2/org.apache.xerces@2.12.2.v20230928-1306",
             "name": "org.apache.xerces",
             "version": "2.12.2.v20230928-1306",
@@ -5792,87 +5975,6 @@
             "purl": "pkg:p2/org.apache.xml.serializer@2.7.1.v201005080400",
             "description": "Apache XML Commons Serializer",
             "publisher": "Eclipse Orbit"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/org.bndtools.headless.build.manager@7.0.0.202310060912",
-            "name": "org.bndtools.headless.build.manager",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/org.bndtools.headless.build.manager@7.0.0.202310060912",
-            "description": "org.bndtools.headless.build.manager",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/org.bndtools.headless.build.plugin.ant@7.0.0.202310060912",
-            "name": "org.bndtools.headless.build.plugin.ant",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/org.bndtools.headless.build.plugin.ant@7.0.0.202310060912",
-            "description": "org.bndtools.headless.build.plugin.ant",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/org.bndtools.headless.build.plugin.gradle@7.0.0.202310060912",
-            "name": "org.bndtools.headless.build.plugin.gradle",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/org.bndtools.headless.build.plugin.gradle@7.0.0.202310060912",
-            "description": "org.bndtools.headless.build.plugin.gradle",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/org.bndtools.launch@7.0.0.202310060912",
-            "name": "org.bndtools.launch",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/org.bndtools.launch@7.0.0.202310060912",
-            "description": "org.bndtools.launch",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/org.bndtools.remoteinstall@7.0.0.202310060912",
-            "name": "org.bndtools.remoteinstall",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/org.bndtools.remoteinstall@7.0.0.202310060912",
-            "description": "org.bndtools.remoteinstall",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/org.bndtools.templating.gitrepo@7.0.0.202310060912",
-            "name": "org.bndtools.templating.gitrepo",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/org.bndtools.templating.gitrepo@7.0.0.202310060912",
-            "description": "org.bndtools.templating.gitrepo",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/org.bndtools.templating@7.0.0.202310060912",
-            "name": "org.bndtools.templating",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/org.bndtools.templating@7.0.0.202310060912",
-            "description": "org.bndtools.templating",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/org.bndtools.versioncontrol.ignores.manager@7.0.0.202310060912",
-            "name": "org.bndtools.versioncontrol.ignores.manager",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/org.bndtools.versioncontrol.ignores.manager@7.0.0.202310060912",
-            "description": "org.bndtools.versioncontrol.ignores.manager",
-            "publisher": "Bndtools https://bndtools.org/"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/org.bndtools.versioncontrol.ignores.plugin.git@7.0.0.202310060912",
-            "name": "org.bndtools.versioncontrol.ignores.plugin.git",
-            "version": "7.0.0.202310060912",
-            "purl": "pkg:p2/org.bndtools.versioncontrol.ignores.plugin.git@7.0.0.202310060912",
-            "description": "org.bndtools.versioncontrol.ignores.plugin.git",
-            "publisher": "Bndtools https://bndtools.org/"
         },
         {
             "type": "library",
@@ -5918,42 +6020,6 @@
             "purl": "pkg:p2/org.eclipse.buildship@3.1.10.v20240802-1314",
             "description": "Buildship: Eclipse Plug-ins for Gradle, provided as part of the Gradle Platform.\n\nCopyright (c) 2023 Gradle Inc.\nFor more information, visit our website https://projects.eclipse.org/projects/tools.buildship",
             "publisher": "Eclipse Buildship"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/org.eclipse.m2e.archetype.catalog@3.2.1.2",
-            "name": "org.eclipse.m2e.archetype.catalog",
-            "version": "3.2.1.2",
-            "purl": "pkg:p2/org.eclipse.m2e.archetype.catalog@3.2.1.2",
-            "description": "M2Eclipse's archetype-catalog",
-            "publisher": "Eclipse.org - m2e"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/org.eclipse.m2e.archetype.common@3.2.104",
-            "name": "org.eclipse.m2e.archetype.common",
-            "version": "3.2.104",
-            "purl": "pkg:p2/org.eclipse.m2e.archetype.common@3.2.104",
-            "description": "M2Eclipse's archetype-common",
-            "publisher": "Eclipse.org - m2e"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/org.eclipse.m2e.archetype.descriptor@3.2.1.2",
-            "name": "org.eclipse.m2e.archetype.descriptor",
-            "version": "3.2.1.2",
-            "purl": "pkg:p2/org.eclipse.m2e.archetype.descriptor@3.2.1.2",
-            "description": "M2Eclipse's archetype-descriptor",
-            "publisher": "Eclipse.org - m2e"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/org.eclipse.m2e.archetype.maven-artifact-transfer@0.13.1.2",
-            "name": "org.eclipse.m2e.archetype.maven-artifact-transfer",
-            "version": "0.13.1.2",
-            "purl": "pkg:p2/org.eclipse.m2e.archetype.maven-artifact-transfer@0.13.1.2",
-            "description": "M2Eclipse's maven-artifact-transfer",
-            "publisher": "Eclipse.org - m2e"
         },
         {
             "type": "library",
@@ -6205,48 +6271,20 @@
         },
         {
             "type": "library",
-            "bom-ref": "pkg:p2/org.json@20131018.0.0",
-            "name": "org.json",
-            "version": "20131018.0.0",
-            "purl": "pkg:p2/org.json@20131018.0.0",
-            "description": "org.json"
-        },
-        {
-            "type": "library",
             "bom-ref": "pkg:p2/org.maven.ide.eclipse.wtp@1.6.1.20231024-1618",
             "name": "org.maven.ide.eclipse.wtp",
             "version": "1.6.1.20231024-1618",
             "purl": "pkg:p2/org.maven.ide.eclipse.wtp@1.6.1.20231024-1618",
             "description": "This version of m2e-wtp cannot be installed on top of the already installed m2eclipse-wtp. Uninstall the previous version of m2eclipse-wtp and try the install again."
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/org.objectweb.asm@5.2.0.v20170126-0011",
-            "name": "org.objectweb.asm",
-            "version": "5.2.0.v20170126-0011",
-            "purl": "pkg:p2/org.objectweb.asm@5.2.0.v20170126-0011",
-            "description": "ASM Core",
-            "publisher": "Eclipse Orbit"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/org.osgi.util.promise@1.2.0.202109301733",
-            "name": "org.osgi.util.promise",
-            "version": "1.2.0.202109301733",
-            "purl": "pkg:p2/org.osgi.util.promise@1.2.0.202109301733",
-            "description": "OSGi Companion Code for org.osgi.util.promise Version 1.2.0",
-            "publisher": "Eclipse Foundation"
-        },
-        {
-            "type": "library",
-            "bom-ref": "pkg:p2/org.slf4j.api@1.7.30.v20200204-2150",
-            "name": "org.slf4j.api",
-            "version": "1.7.30.v20200204-2150",
-            "purl": "pkg:p2/org.slf4j.api@1.7.30.v20200204-2150",
-            "description": "The slf4j API"
         }
     ],
     "dependencies": [
+        {
+            "ref": "pkg:maven/biz.aQute.bnd/biz.aQute.bnd.embedded-repo@7.0.0",
+            "dependsOn": [
+                "pkg:maven/biz.aQute.bnd/biz.aQute.bndlib@7.0.0"
+            ]
+        },
         {
             "ref": "pkg:maven/com.liferay.ide.enterprise.features/com.liferay.ide.enterprise@3.10.6-SNAPSHOT",
             "dependsOn": [
@@ -6268,8 +6306,7 @@
                 "pkg:p2/org.eclipse.sapphire.modeling.xml@9.1.1.201712191343",
                 "pkg:p2/org.eclipse.sapphire.workspace@9.1.1.201712191343",
                 "pkg:maven/org.eclipse.webtools.sourceediting/org.eclipse.wst.sse.core@1.2.1500-SNAPSHOT",
-                "pkg:maven/org.eclipse.webtools.sourceediting/org.eclipse.wst.xml.core@1.2.1000-SNAPSHOT",
-                "pkg:p2/org.json@20131018.0.0"
+                "pkg:maven/org.eclipse.webtools.sourceediting/org.eclipse.wst.xml.core@1.2.1000-SNAPSHOT"
             ]
         },
         {
@@ -6295,18 +6332,17 @@
         {
             "ref": "pkg:maven/com.liferay.ide.maven.plugins/com.liferay.ide.maven.core@3.10.6-SNAPSHOT",
             "dependsOn": [
-                "pkg:p2/biz.aQute.bndlib@7.0.0.202310060912",
+                "pkg:maven/biz.aQute.bnd/biz.aQute.bndlib@7.0.0",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.core@3.10.6-SNAPSHOT",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.hook.core@3.10.6-SNAPSHOT",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.layouttpl.core@3.10.6-SNAPSHOT",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.project.core@3.10.6-SNAPSHOT",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.server.core@3.10.6-SNAPSHOT",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.theme.core@3.10.6-SNAPSHOT",
-                "pkg:p2/com.liferay.release.util@1.0.0",
+                "pkg:maven/com.liferay/com.liferay.release.util@1.0.0",
                 "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.io@2.8.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.jdt/org.eclipse.jdt.core@3.44.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.jdt/org.eclipse.jdt.launching@3.24.0-SNAPSHOT",
-                "pkg:p2/org.eclipse.m2e.archetype.common@3.2.104",
                 "pkg:maven/org.eclipse.m2e/org.eclipse.m2e.core@2.7.600-SNAPSHOT",
                 "pkg:maven/org.eclipse.m2e/org.eclipse.m2e.jdt@2.5.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.m2e/org.eclipse.m2e.maven.runtime@3.9.1101-SNAPSHOT",
@@ -6316,7 +6352,6 @@
                 "pkg:maven/org.eclipse.webtools.common/org.eclipse.wst.common.project.facet.core@1.5.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.webtools.sourceediting/org.eclipse.wst.sse.core@1.2.1500-SNAPSHOT",
                 "pkg:maven/org.eclipse.webtools.sourceediting/org.eclipse.wst.xml.core@1.2.1000-SNAPSHOT",
-                "pkg:p2/org.json@20131018.0.0",
                 "pkg:maven/org.eclipse.m2e/org.eclipse.m2e.apt.core@2.3.100-SNAPSHOT",
                 "pkg:maven/org.eclipse.m2e/org.eclipse.m2e.apt.ui@2.0.600-SNAPSHOT",
                 "pkg:maven/org.eclipse.m2e/org.eclipse.m2e.discovery@2.1.100-SNAPSHOT",
@@ -6368,41 +6403,39 @@
         {
             "ref": "pkg:maven/com.liferay.ide.tools.features/com.liferay.ide.hidden@3.10.6-SNAPSHOT",
             "dependsOn": [
-                "pkg:p2/com.liferay.release.util@1.0.0",
+                "pkg:maven/com.liferay/com.liferay.release.util@1.0.0",
                 "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.logging@1.2.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.compress@1.22.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.codec@1.14.0-SNAPSHOT",
-                "pkg:p2/org.apache.commons.collections@3.2.2.v201511171945",
+                "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.collections@3.2.2-SNAPSHOT",
                 "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.io@2.8.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.lang@2.6.0-SNAPSHOT",
                 "pkg:p2/org.gradle.toolingapi@8.9.0.v20240802-1314",
-                "pkg:p2/org.json@20131018.0.0",
-                "pkg:p2/org.objectweb.asm@5.2.0.v20170126-0011"
+                "pkg:maven/org.eclipse.orbit.bundles/org.objectweb.asm@5.2.0-SNAPSHOT"
             ]
         },
         {
             "ref": "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.core@3.10.6-SNAPSHOT",
             "dependsOn": [
-                "pkg:p2/com.liferay.release.util@1.0.0",
+                "pkg:maven/com.liferay/com.liferay.release.util@1.0.0",
                 "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.codec@1.14.0-SNAPSHOT",
-                "pkg:p2/org.apache.commons.collections@3.2.2.v201511171945",
+                "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.collections@3.2.2-SNAPSHOT",
                 "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.io@2.8.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.lang@2.6.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.logging@1.2.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.jdt/org.eclipse.jdt.core@3.44.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.jdt/org.eclipse.jdt.launching@3.24.0-SNAPSHOT",
-                "pkg:p2/org.eclipse.sapphire.modeling@9.1.1.201712191343",
-                "pkg:p2/org.json@20131018.0.0"
+                "pkg:p2/org.eclipse.sapphire.modeling@9.1.1.201712191343"
             ]
         },
         {
             "ref": "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.gradle.core@3.10.6-SNAPSHOT",
             "dependsOn": [
-                "pkg:p2/biz.aQute.bndlib@7.0.0.202310060912",
+                "pkg:maven/biz.aQute.bnd/biz.aQute.bndlib@7.0.0",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.core@3.10.6-SNAPSHOT",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.project.core@3.10.6-SNAPSHOT",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.server.core@3.10.6-SNAPSHOT",
-                "pkg:p2/com.liferay.release.util@1.0.0",
+                "pkg:maven/com.liferay/com.liferay.release.util@1.0.0",
                 "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.io@2.8.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.lang@2.6.0-SNAPSHOT",
                 "pkg:p2/org.eclipse.buildship.core@3.1.10.v20240802-1314",
@@ -6434,8 +6467,7 @@
                 "pkg:maven/org.eclipse.jdt/org.eclipse.jdt.ui@3.36.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.platform/org.eclipse.osgi.services@3.12.300-SNAPSHOT",
                 "pkg:p2/org.eclipse.sapphire.ui@9.1.1.201712191343",
-                "pkg:maven/org.eclipse.webtools.common/org.eclipse.wst.common.project.facet.ui@1.5.100-SNAPSHOT",
-                "pkg:p2/org.json@20131018.0.0"
+                "pkg:maven/org.eclipse.webtools.common/org.eclipse.wst.common.project.facet.ui@1.5.100-SNAPSHOT"
             ]
         },
         {
@@ -6463,7 +6495,7 @@
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.project.core@3.10.6-SNAPSHOT",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.sdk.core@3.10.6-SNAPSHOT",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.server.core@3.10.6-SNAPSHOT",
-                "pkg:p2/org.apache.commons.collections@3.2.2.v201511171945",
+                "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.collections@3.2.2-SNAPSHOT",
                 "pkg:maven/org.eclipse.jdt/org.eclipse.jdt.core@3.44.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.webtools.common/org.eclipse.jst.common.project.facet.core@1.13.300-SNAPSHOT",
                 "pkg:p2/org.eclipse.sapphire.modeling@9.1.1.201712191343",
@@ -6495,11 +6527,11 @@
         {
             "ref": "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.project.core@3.10.6-SNAPSHOT",
             "dependsOn": [
-                "pkg:p2/biz.aQute.bndlib@7.0.0.202310060912",
+                "pkg:maven/biz.aQute.bnd/biz.aQute.bndlib@7.0.0",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.core@3.10.6-SNAPSHOT",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.sdk.core@3.10.6-SNAPSHOT",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.server.core@3.10.6-SNAPSHOT",
-                "pkg:p2/com.liferay.release.util@1.0.0",
+                "pkg:maven/com.liferay/com.liferay.release.util@1.0.0",
                 "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.io@2.8.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.lang@2.6.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.jdt/org.eclipse.jdt.launching@3.24.0-SNAPSHOT",
@@ -6517,13 +6549,13 @@
         {
             "ref": "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.project.ui@3.10.6-SNAPSHOT",
             "dependsOn": [
-                "pkg:p2/biz.aQute.bndlib@7.0.0.202310060912",
+                "pkg:maven/biz.aQute.bnd/biz.aQute.bndlib@7.0.0",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.core@3.10.6-SNAPSHOT",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.project.core@3.10.6-SNAPSHOT",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.sdk.core@3.10.6-SNAPSHOT",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.server.core@3.10.6-SNAPSHOT",
                 "pkg:maven/com.liferay.ide.tools.plugins/com.liferay.ide.ui@3.10.6-SNAPSHOT",
-                "pkg:p2/com.liferay.release.util@1.0.0",
+                "pkg:maven/com.liferay/com.liferay.release.util@1.0.0",
                 "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.io@2.8.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.platform/org.eclipse.ant.ui@3.10.300-SNAPSHOT",
                 "pkg:maven/org.eclipse.jdt/org.eclipse.jdt.core@3.44.0-SNAPSHOT",
@@ -6565,7 +6597,6 @@
                 "pkg:maven/org.eclipse.webtools.common/org.eclipse.jst.common.project.facet.core@1.13.300-SNAPSHOT",
                 "pkg:maven/org.eclipse.webtools.common/org.eclipse.wst.common.project.facet.core@1.5.0-SNAPSHOT",
                 "pkg:p2/org.gradle.toolingapi@8.9.0.v20240802-1314",
-                "pkg:p2/org.json@20131018.0.0",
                 "pkg:maven/org.eclipse.orbit.bundles/org.slf4j.api@1.7.30-SNAPSHOT"
             ]
         },
@@ -6588,7 +6619,6 @@
                 "pkg:maven/org.eclipse.tm.terminal/org.eclipse.tm.terminal.view.ui@4.1.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.webtools.common/org.eclipse.wst.common.project.facet.ui@1.5.100-SNAPSHOT",
                 "pkg:maven/org.eclipse.webtools.sourceediting/org.eclipse.wst.sse.ui@1.7.1200-SNAPSHOT",
-                "pkg:p2/org.json@20131018.0.0",
                 "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.logging@1.2.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.orbit.bundles/org.slf4j.api@1.7.30-SNAPSHOT"
             ]
@@ -6632,6 +6662,12 @@
                 "pkg:maven/org.eclipse.jdt/org.eclipse.jdt.core@3.44.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.jdt/org.eclipse.jdt.ui@3.36.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.webtools.common/org.eclipse.wst.common.project.facet.core@1.5.0-SNAPSHOT"
+            ]
+        },
+        {
+            "ref": "pkg:maven/org.apache.maven.archetype/archetype-common@3.2.1",
+            "dependsOn": [
+                "pkg:maven/org.eclipse.m2e/org.eclipse.m2e.maven.runtime@3.9.1101-SNAPSHOT"
             ]
         },
         {
@@ -7659,7 +7695,7 @@
                 "pkg:maven/org.apache.felix/org.apache.felix.gogo.runtime@1.1.6",
                 "pkg:maven/org.apache.felix/org.apache.felix.gogo.shell@1.1.4",
                 "pkg:maven/org.osgi/org.osgi.util.function@1.2.0",
-                "pkg:p2/org.osgi.util.promise@1.2.0.202109301733",
+                "pkg:maven/org.osgi/org.osgi.util.promise@1.2.0",
                 "pkg:maven/org.osgi/org.osgi.util.measurement@1.0.2",
                 "pkg:maven/org.osgi/org.osgi.util.position@1.0.1",
                 "pkg:maven/org.osgi/org.osgi.util.xml@1.0.2",
@@ -8047,10 +8083,6 @@
         {
             "ref": "pkg:maven/org.eclipse.m2e/org.eclipse.m2e.feature@2.10.0-SNAPSHOT",
             "dependsOn": [
-                "pkg:p2/org.eclipse.m2e.archetype.common@3.2.104",
-                "pkg:p2/org.eclipse.m2e.archetype.catalog@3.2.1.2",
-                "pkg:p2/org.eclipse.m2e.archetype.descriptor@3.2.1.2",
-                "pkg:p2/org.eclipse.m2e.archetype.maven-artifact-transfer@0.13.1.2",
                 "pkg:maven/org.eclipse.m2e/org.eclipse.m2e.model.edit@2.0.700-SNAPSHOT",
                 "pkg:maven/org.eclipse.m2e/org.eclipse.m2e.core@2.7.600-SNAPSHOT",
                 "pkg:maven/org.eclipse.m2e/org.eclipse.m2e.launching@2.1.200-SNAPSHOT",
@@ -8331,8 +8363,8 @@
         {
             "ref": "pkg:maven/org.eclipse.pde/org.eclipse.pde@3.16.500-SNAPSHOT",
             "dependsOn": [
-                "pkg:p2/biz.aQute.repository@7.0.0.202310060912",
-                "pkg:p2/bndtools.jareditor@7.0.0.202310060912",
+                "pkg:maven/biz.aQute.bnd/biz.aQute.repository@7.0.0",
+                "pkg:maven/org.bndtools/bndtools.jareditor@7.0.0",
                 "pkg:maven/org.eclipse.pde/org.eclipse.pde@3.13.3300-SNAPSHOT",
                 "pkg:maven/org.eclipse.pde/org.eclipse.pde.build@3.12.800-SNAPSHOT",
                 "pkg:maven/org.eclipse.pde/org.eclipse.pde.core@3.21.100-SNAPSHOT",
@@ -8416,7 +8448,7 @@
             "ref": "pkg:maven/org.eclipse.platform/org.eclipse.osgi.util@3.7.400-SNAPSHOT",
             "dependsOn": [
                 "pkg:maven/org.osgi/org.osgi.util.function@1.2.0",
-                "pkg:p2/org.osgi.util.promise@1.2.0.202109301733",
+                "pkg:maven/org.osgi/org.osgi.util.promise@1.2.0",
                 "pkg:maven/org.osgi/org.osgi.util.measurement@1.0.2",
                 "pkg:maven/org.osgi/org.osgi.util.position@1.0.1",
                 "pkg:maven/org.osgi/org.osgi.util.xml@1.0.2"
@@ -9061,7 +9093,7 @@
                 "pkg:maven/org.eclipse.webtools.dali/org.eclipse.jpt.jpa.ui@3.7.100-SNAPSHOT",
                 "pkg:maven/org.eclipse.webtools.dali/org.eclipse.jpt.doc.user@3.2.101-SNAPSHOT",
                 "pkg:p2/org.eclipse.persistence.jpa.jpql@2.7.3.v20180807-4be1041",
-                "pkg:p2/org.apache.commons.collections@3.2.2.v201511171945",
+                "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.collections@3.2.2-SNAPSHOT",
                 "pkg:p2/org.jdom@1.1.3.v20230812-1600",
                 "pkg:maven/org.eclipse.webtools.dali/org.eclipse.jpt.jpa.branding@3.4.1-SNAPSHOT"
             ]
@@ -9074,7 +9106,7 @@
                 "pkg:maven/org.eclipse.webtools.dali/org.eclipse.jpt.jpa.db@2.2.201-SNAPSHOT",
                 "pkg:maven/org.eclipse.webtools.dali/org.eclipse.jpt.common.core@1.6.0-SNAPSHOT",
                 "pkg:maven/org.eclipse.webtools.dali/org.eclipse.jpt.jpa.core@3.8.100-SNAPSHOT",
-                "pkg:p2/org.apache.commons.collections@3.2.2.v201511171945",
+                "pkg:maven/org.eclipse.orbit.bundles/org.apache.commons.collections@3.2.2-SNAPSHOT",
                 "pkg:p2/org.jdom@1.1.3.v20230812-1600"
             ]
         },
@@ -10239,46 +10271,40 @@
             ]
         },
         {
-            "ref": "pkg:p2/biz.aQute.bnd.embedded-repo@7.0.0.202310060912",
-            "dependsOn": [
-                "pkg:p2/biz.aQute.bndlib@7.0.0.202310060912"
-            ]
-        },
-        {
             "ref": "pkg:p2/bndtools.m2e.feature@7.0.0.REL-202310060912-gb82dc86",
             "dependsOn": [
-                "pkg:p2/bndtools.m2e@7.0.0.202310060912",
-                "pkg:p2/biz.aQute.bnd.maven@7.0.0.202310060912"
+                "pkg:maven/org.bndtools/bndtools.m2e@7.0.0",
+                "pkg:maven/biz.aQute.bnd/biz.aQute.bnd.maven@7.0.0"
             ]
         },
         {
             "ref": "pkg:p2/bndtools.main.feature@7.0.0.REL-202310060912-gb82dc86",
             "dependsOn": [
-                "pkg:p2/biz.aQute.bnd.util@7.0.0.202310060912",
-                "pkg:p2/biz.aQute.bndlib@7.0.0.202310060912",
-                "pkg:p2/biz.aQute.repository@7.0.0.202310060912",
-                "pkg:p2/biz.aQute.resolve@7.0.0.202310060912",
-                "pkg:p2/bndtools.api@7.0.0.202310060912",
-                "pkg:p2/bndtools.core@7.0.0.202310060912",
-                "pkg:p2/bndtools.core.services@7.0.0.202310060912",
-                "pkg:p2/bndtools.builder@7.0.0.202310060912",
-                "pkg:p2/bndtools.jareditor@7.0.0.202310060912",
-                "pkg:p2/bndtools.release@7.0.0.202310060912",
-                "pkg:p2/biz.aQute.bnd.embedded-repo@7.0.0.202310060912",
-                "pkg:p2/org.bndtools.headless.build.manager@7.0.0.202310060912",
-                "pkg:p2/org.bndtools.headless.build.plugin.ant@7.0.0.202310060912",
-                "pkg:p2/org.bndtools.headless.build.plugin.gradle@7.0.0.202310060912",
-                "pkg:p2/org.bndtools.launch@7.0.0.202310060912",
-                "pkg:p2/org.bndtools.remoteinstall@7.0.0.202310060912",
-                "pkg:p2/org.bndtools.versioncontrol.ignores.manager@7.0.0.202310060912",
-                "pkg:p2/org.bndtools.versioncontrol.ignores.plugin.git@7.0.0.202310060912",
-                "pkg:p2/org.bndtools.templating@7.0.0.202310060912",
-                "pkg:p2/org.bndtools.templating.gitrepo@7.0.0.202310060912",
+                "pkg:maven/biz.aQute.bnd/biz.aQute.bnd.util@7.0.0",
+                "pkg:maven/biz.aQute.bnd/biz.aQute.bndlib@7.0.0",
+                "pkg:maven/biz.aQute.bnd/biz.aQute.repository@7.0.0",
+                "pkg:maven/biz.aQute.bnd/biz.aQute.resolve@7.0.0",
+                "pkg:maven/org.bndtools/bndtools.api@7.0.0",
+                "pkg:maven/org.bndtools/bndtools.core@7.0.0",
+                "pkg:maven/org.bndtools/bndtools.core.services@7.0.0",
+                "pkg:maven/org.bndtools/bndtools.builder@7.0.0",
+                "pkg:maven/org.bndtools/bndtools.jareditor@7.0.0",
+                "pkg:maven/org.bndtools/bndtools.release@7.0.0",
+                "pkg:maven/biz.aQute.bnd/biz.aQute.bnd.embedded-repo@7.0.0",
+                "pkg:maven/org.bndtools/org.bndtools.headless.build.manager@7.0.0",
+                "pkg:maven/org.bndtools/org.bndtools.headless.build.plugin.ant@7.0.0",
+                "pkg:maven/org.bndtools/org.bndtools.headless.build.plugin.gradle@7.0.0",
+                "pkg:maven/org.bndtools/org.bndtools.launch@7.0.0",
+                "pkg:maven/org.bndtools/org.bndtools.remoteinstall@7.0.0",
+                "pkg:maven/org.bndtools/org.bndtools.versioncontrol.ignores.manager@7.0.0",
+                "pkg:maven/org.bndtools/org.bndtools.versioncontrol.ignores.plugin.git@7.0.0",
+                "pkg:maven/org.bndtools/org.bndtools.templating@7.0.0",
+                "pkg:maven/org.bndtools/org.bndtools.templating.gitrepo@7.0.0",
                 "pkg:maven/org.eclipse.orbit.bundles/org.slf4j.api@1.7.30-SNAPSHOT",
                 "pkg:maven/org.osgi/org.osgi.service.coordinator@1.0.2",
                 "pkg:maven/org.osgi/org.osgi.service.repository@1.1.0",
                 "pkg:maven/org.osgi/org.osgi.util.function@1.2.0",
-                "pkg:p2/org.osgi.util.promise@1.2.0.202109301733"
+                "pkg:maven/org.osgi/org.osgi.util.promise@1.2.0"
             ]
         },
         {
@@ -10322,30 +10348,6 @@
             ]
         },
         {
-            "ref": "pkg:p2/org.eclipse.m2e.archetype.catalog@3.2.1.2",
-            "dependsOn": [
-                "pkg:p2/org.eclipse.m2e.archetype.common@3.2.104"
-            ]
-        },
-        {
-            "ref": "pkg:p2/org.eclipse.m2e.archetype.common@3.2.104",
-            "dependsOn": [
-                "pkg:maven/org.eclipse.m2e/org.eclipse.m2e.maven.runtime@3.9.1101-SNAPSHOT"
-            ]
-        },
-        {
-            "ref": "pkg:p2/org.eclipse.m2e.archetype.descriptor@3.2.1.2",
-            "dependsOn": [
-                "pkg:p2/org.eclipse.m2e.archetype.common@3.2.104"
-            ]
-        },
-        {
-            "ref": "pkg:p2/org.eclipse.m2e.archetype.maven-artifact-transfer@0.13.1.2",
-            "dependsOn": [
-                "pkg:p2/org.eclipse.m2e.archetype.common@3.2.104"
-            ]
-        },
-        {
             "ref": "pkg:p2/org.eclipse.sapphire.java.jdt.ui@9.1.1.201712191343",
             "dependsOn": [
                 "pkg:p2/org.eclipse.sapphire.modeling@9.1.1.201712191343",
@@ -10379,7 +10381,7 @@
         {
             "ref": "pkg:p2/org.eclipse.sapphire.modeling@9.1.1.201712191343",
             "dependsOn": [
-                "pkg:p2/org.objectweb.asm@5.2.0.v20170126-0011"
+                "pkg:maven/org.eclipse.orbit.bundles/org.objectweb.asm@5.2.0-SNAPSHOT"
             ]
         },
         {
