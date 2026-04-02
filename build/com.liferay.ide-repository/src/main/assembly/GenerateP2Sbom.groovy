@@ -142,6 +142,37 @@ root.units.unit.each { unit ->
 	def mavenGroupId = getProperty(unit, "maven-groupId")
 	def mavenArtifactId = getProperty(unit, "maven-artifactId")
 	def mavenVersion = getProperty(unit, "maven-version")
+
+	// If content.xml lacks Maven coords, check the plugin JAR for pom.properties
+
+	if (!mavenGroupId && !id.endsWith(".feature.group")) {
+		def pluginJar = new File(repositoryDir, "plugins").listFiles()?.find { f ->
+			f.name.startsWith("${id}_") && f.name.endsWith(".jar")
+		}
+
+		if (pluginJar) {
+			try {
+				new ZipFile(pluginJar).withCloseable { zip ->
+					def pomPropsEntry = zip.entries().toList().find { entry ->
+						entry.name.startsWith("META-INF/maven/") && entry.name.endsWith("/pom.properties")
+					}
+
+					if (pomPropsEntry) {
+						def props = new Properties()
+
+						props.load(zip.getInputStream(pomPropsEntry))
+
+						mavenGroupId = props.getProperty("groupId")
+						mavenArtifactId = props.getProperty("artifactId")
+						mavenVersion = props.getProperty("version")
+					}
+				}
+			}
+			catch (Exception ignored) {
+			}
+		}
+	}
+
 	def p2Name = getProperty(unit, "org.eclipse.equinox.p2.name")
 	def p2Provider = getProperty(unit, "org.eclipse.equinox.p2.provider")
 	def p2Description = getProperty(unit, "org.eclipse.equinox.p2.description")
