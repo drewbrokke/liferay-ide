@@ -286,8 +286,47 @@ if (mappingFile.exists()) {
 
 def jarVersionPattern = Pattern.compile("(.+?)[-_](\\d+\\.\\d+[\\d.]*(?:-[A-Za-z0-9]+)?)\\.jar")
 
+// Read Maven coordinates from META-INF/maven/**/pom.properties inside a JAR
+
+def readPomProperties = { File jarFile ->
+	try {
+		def zip = new ZipFile(jarFile)
+
+		try {
+			def pomPropsEntry = zip.entries().toList().find { entry ->
+				entry.name.startsWith("META-INF/maven/") && entry.name.endsWith("/pom.properties")
+			}
+
+			if (!pomPropsEntry) {
+				return null
+			}
+
+			def props = new Properties()
+
+			props.load(zip.getInputStream(pomPropsEntry))
+
+			def g = props.getProperty("groupId")
+			def a = props.getProperty("artifactId")
+			def v = props.getProperty("version")
+
+			if (g && a && v) {
+				return [groupId: g, artifactId: a, version: v]
+			}
+		}
+		finally {
+			zip.close()
+		}
+	}
+	catch (Exception e) {
+		// JAR may be corrupt or not a valid zip
+	}
+
+	return null
+}
+
 def pluginDirs = ["tools/plugins", "enterprise/plugins", "maven/plugins", "portal/plugins"]
 def embeddedCount = 0
+def pomPropsCount = 0
 
 pluginDirs.each { pluginDir ->
 	def dir = new File(projectRoot, pluginDir)
@@ -325,44 +364,68 @@ pluginDirs.each { pluginDir ->
 			}
 
 			def jarName = entry.contains("/") ? entry.substring(entry.lastIndexOf("/") + 1) : entry
+			def jarFile = new File(pluginRoot, entry)
 
-			// Check mapping file first
+			def g = null
+			def a = null
+			def v = null
+			def source = null
 
-			def mapping = embeddedJarMapping[jarName]
-			def purl
+			// Priority 1: Read pom.properties from inside the JAR
 
-			if (mapping) {
-				def g = mapping.groupId
-				def a = mapping.artifactId
-				def v = mapping.version
+			if (jarFile.exists()) {
+				def pomProps = readPomProperties(jarFile)
 
-				if (!v) {
-					Matcher vm = jarVersionPattern.matcher(jarName)
-
-					if (vm.matches()) {
-						v = vm.group(2)
-					}
-					else {
-						v = "unknown"
-					}
+				if (pomProps) {
+					g = pomProps.groupId
+					a = pomProps.artifactId
+					v = pomProps.version
+					source = "pom.properties"
+					pomPropsCount++
 				}
-
-				purl = "pkg:maven/${g}/${a}@${v}"
 			}
-			else {
+
+			// Priority 2: Check the mapping file
+
+			if (!g) {
+				def mapping = embeddedJarMapping[jarName]
+
+				if (mapping) {
+					g = mapping.groupId
+					a = mapping.artifactId
+					v = mapping.version
+					source = "mapping"
+				}
+			}
+
+			// Priority 3: Parse version from filename
+
+			if (!v) {
 				Matcher vm = jarVersionPattern.matcher(jarName)
 
 				if (vm.matches()) {
-					def artifactGuess = vm.group(1)
-					def versionGuess = vm.group(2)
+					if (!a) {
+						a = vm.group(1)
+					}
 
-					purl = "pkg:maven/unknown/${artifactGuess}@${versionGuess}"
+					v = vm.group(2)
 				}
-				else {
-					def nameWithoutJar = jarName.replace(".jar", "")
+			}
 
-					purl = "pkg:maven/unknown/${nameWithoutJar}@unknown"
-				}
+			// Build purl
+
+			def purl
+
+			if (g && a && v) {
+				purl = "pkg:maven/${g}/${a}@${v}"
+			}
+			else if (a && v) {
+				purl = "pkg:maven/unknown/${a}@${v}"
+			}
+			else {
+				def nameWithoutJar = jarName.replace(".jar", "")
+
+				purl = "pkg:maven/unknown/${nameWithoutJar}@unknown"
 			}
 
 			// Check if already captured from p2 metadata
@@ -374,15 +437,15 @@ pluginDirs.each { pluginDir ->
 			def comp = [
 				type: "library",
 				"bom-ref": purl,
-				name: jarName.replace(".jar", ""),
-				version: purl.split("@").last(),
+				name: a ?: jarName.replace(".jar", ""),
+				version: v ?: "unknown",
 				purl: purl,
 				scope: "required",
 				description: "Embedded JAR in ${bundleId ?: pluginRoot.name}"
 			]
 
-			if (mapping?.groupId) {
-				comp["group"] = mapping.groupId
+			if (g && g != "unknown") {
+				comp["group"] = g
 			}
 
 			components.add(comp)
@@ -391,7 +454,7 @@ pluginDirs.each { pluginDir ->
 	}
 }
 
-println "Found ${embeddedCount} embedded JARs not already in p2 metadata"
+println "Found ${embeddedCount} embedded JARs not already in p2 metadata (${pomPropsCount} identified via pom.properties)"
 
 // --- Phase C: Generate CycloneDX 1.5 JSON ---
 
