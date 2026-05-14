@@ -8,6 +8,6 @@ Require-Bundle: com.liferay.ide.core,
  com.liferay.ide.test.core.base,
  org.eclipse.osgi,
  org.junit
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-ActivationPolicy: lazy
 Export-Package: com.liferay.ide.core.tests
