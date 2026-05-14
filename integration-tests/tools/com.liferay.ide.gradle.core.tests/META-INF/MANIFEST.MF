@@ -14,5 +14,5 @@ Require-Bundle: com.liferay.ide.core,
  org.eclipse.sapphire.modeling,
  org.junit,
  org.eclipse.sapphire.platform
-Bundle-RequiredExecutionEnvironment: JavaSE-21
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
