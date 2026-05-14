@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Deploys the generated p2 repository to Linode
+# Deploys the generated p2 repository to Google Cloud Storage
 #
-# S3cmd should be installed and configured
+# gcloud should be installed and authenticated
 
 if [ $# != 4 ]
 then
