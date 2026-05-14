@@ -11,7 +11,7 @@ Require-Bundle:
  org.eclipse.swtbot.forms.finder,
  org.eclipse.swtbot.go,
  org.eclipse.ui.forms
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Bundle-ActivationPolicy: lazy
 Export-Package: com.liferay.ide.functional.liferay,
  com.liferay.ide.functional.liferay.action,

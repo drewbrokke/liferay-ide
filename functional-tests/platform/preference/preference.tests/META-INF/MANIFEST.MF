@@ -4,7 +4,7 @@ Bundle-Name: Liferay IDE Functional Preference Tests
 Bundle-SymbolicName: com.liferay.ide.functional.preference.tests
 Bundle-Version: 4.0.0.qualifier
 Bundle-Vendor: Liferay
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Bundle-ActivationPolicy: lazy
 Require-Bundle: com.liferay.ide.functional.liferay,
  com.liferay.ide.functional.swtbot,

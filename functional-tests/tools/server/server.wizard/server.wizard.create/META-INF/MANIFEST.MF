@@ -8,5 +8,5 @@ Require-Bundle: com.liferay.ide.functional.liferay,
  com.liferay.ide.functional.server.wizard.base,
  com.liferay.ide.functional.swtbot,
  org.eclipse.swtbot.go
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Bundle-ActivationPolicy: lazy
